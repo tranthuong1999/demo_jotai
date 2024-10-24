@@ -1,6 +1,7 @@
 // src/App.js
 import React from 'react';
 import TodoList from './components/ TodoList';
+import "./index.css"
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="app">
       <div onClick={handleParent}>
         <div onClick={handleChild}> Child </div>
       </div>
