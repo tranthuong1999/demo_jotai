@@ -1,26 +1,30 @@
+// src/App.js
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TodoList from './components/ TodoList';
 
 function App() {
+
+  const handleChild = () => {
+    console.log("child clicked")
+  }
+
+  const handleParent = () => {
+    console.log("parent clicked")
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div onClick={handleParent}>
+        <div onClick={handleChild}> Child </div>
+      </div>
+      {/* <TodoList /> */}
     </div>
   );
 }
 
 export default App;
+
+// key dùng để đinh danh các phần tử trong 1 danh và cần cố đinh theo thời gian ( khi thao tác với mảng mà đặt key theo index ==> key không cố đinh)
+// index của phần từ có thể thay đôi theo thời gian nên không sử dụng làm key được 
+
+
