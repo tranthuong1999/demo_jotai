@@ -1,1 +1,1 @@
-console.log("card update service started");
+console.log("card update service check updated successfully!");
